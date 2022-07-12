@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Display Flex</title>
+    <style>
+        .flex{
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid black;
+            display: flex;
+        }
+        .item{
+            font-size: 24px;
+            height: 50%;
+            text-align: center;
+            width: 100px;
+            line-height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div>
+    <h1>Fundamentos - Flex direction</h1>
+    <style>
+        .flex-container{
+            display: flex;  
+            height: 200px;
+            border: 1px solid black;
+            max-width: 300px;
+        }
+        .flex-item{
+            background: blue;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+        .row{
+            flex-direction: row;
+        }
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+        .row-reverse li{
+            background-color: red;
+
+        }
+        .column{
+            float: left;
+            flex-direction: column;
+        }
+        .column li{
+            background-color: orange;
+        }
+        .column-reverse{
+            flex-direction: column-reverse;
+            float: right;
+        }
+        .column-reverse li{
+            background-color: purple;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+        .flex-container1{
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+        }
+        .item1{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            
+        }
+        .default{
+            flex-flow: row nowrap;
+        }
+        .wrap1{
+            flex-flow: row wrap;
+        }
+        .wrapreverse{
+            flex-flow: row wrap-reverse;
+        }
+        .r-nowrap{
+            flex-flow: row-reverse nowrap;
+        }
+        .r-wrap{
+            flex-flow: row-reverse wrap;
+        }
+        .rr-wrap{
+            flex-flow: row-reverse wrap-reverse;
+        }
+    </style>
+    <ul class="flex-container row">
+        <LI class="flex-item">1</LI>
+        <LI class="flex-item">2</LI>
+        <LI class="flex-item">3</LI>
+        <LI class="flex-item">4</LI>
+        <LI class="flex-item">5</LI>
+    </ul>
+    <ul class="flex-container row-reverse">
+        <LI class="flex-item">1</LI>
+        <LI class="flex-item">2</LI>
+        <LI class="flex-item">3</LI>
+        <LI class="flex-item">4</LI>
+        <LI class="flex-item">5</LI>
+    </ul>
+    <ul class="flex-container column">
+        <LI class="flex-item">1</LI>
+        <LI class="flex-item">2</LI>
+        <LI class="flex-item">3</LI>
+        <LI class="flex-item">4</LI>
+        <LI class="flex-item">5</LI>
+    </ul>
+    <ul class="flex-container column-reverse">
+        <LI class="flex-item">1</LI>
+        <LI class="flex-item">2</LI>
+        <LI class="flex-item">3</LI>
+        <LI class="flex-item">4</LI>
+        <LI class="flex-item">5</LI>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <h1>Fundamentos - Flex Wrap</h1>
+    <h5> No Wrap</h5>
+    <div class="flex-container nowrap">
+        <div class="item orange">1</div>
+        <div class="item blue">2</div>
+        <div class="item green">3</div>
+        <div class="item orange">1</div>
+        <div class="item blue">2</div>
+        <div class="item green">3</div>
+    </div>
+    <h1>Wrap</h1>
+    <div class="flex-container wrap">
+        <div class="item orange">1</div>
+        <div class="item blue">2</div>
+        <div class="item green">3</div>
+        <div class="item orange">1</div>
+        <div class="item blue">2</div>
+        <div class="item green">3</div>
+        <div class="item orange">1</div>
+        <div class="item blue">2</div>
+        <div class="item green">3</div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+
+        <h1>Fundamentos - Flex Flow</h1>
+
+        <h3>Default no wrap</h3>
+        <div class="flex-container1 default">
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+
+        </div>
+        <h3>Wrap</h3>
+        <div class="flex-container1 wrap">
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+            <div class="item1">6</div>
+    </div>
+    <h3>Wrap-reverse</h3>
+        <div class="flex-container1 wrapreverse">
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+            <div class="item1">6</div>
+    </div>
+    <h3>row-reverse nowrap</h3>
+        <div class="flex-container1 r-nowrap">
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+            <div class="item1">6</div>
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+            <div class="item1">6</div>
+    </div>
+    <h3>row-reverse nowrap</h3>
+        <div class="flex-container1 r-wrap">
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+            <div class="item1">6</div>
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+            <div class="item1">6</div>
+    </div>
+    <h3>row-reverse nowrap</h3>
+        <div class="flex-container1 rr-wrap">
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+            <div class="item1">6</div>
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+            <div class="item1">6</div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <h1>Fundamentos - Justify-content</h1>
+    <style>
+        .container{
+            width: 1000px;
+            border: 1px solid black;
+            margin 0px;
+            display: flex;
+            margin-bottom: 1px;
+        }
+        .item3{
+            background-color: red;
+            margin: 5px;
+            text-align: center;
+            color: wheat;
+        }
+        .flex-start{
+            justify-content: flex-start;
+        }
+        .flex-end{
+            justify-content: flex-end;
+        }
+        .flexcenter{
+            justify-content: center;
+        }
+        .space{
+            justify-content: space-between;
+        }
+        .spacearound{
+            justify-content: space-around;
+        }
+        .column1{
+            flex-direction: column;
+            min-height: 200px;
+        }
+    </style>
+    <h3>Flex Start</h3>
+    <section class="container flex-start">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section>
+    <h3>Flex end</h3>
+    <section class="container flex-end">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section>
+    <h3>Flex center</h3>
+    <section class="container flexcenter">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section>
+    <h3>Space Between</h3>
+    <section class="container space">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section>
+    <h3>Space around</h3>
+    <section class="container spacearound">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section><br>
+    <h1>Column</h1>
+    <p>flex start</p>
+    <section class="container flex-start column1">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section>
+    <p>flex start</p>
+    <section class="container flex-end column1">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section>
+    <p>flex center</p>
+    <section class="container flexcenter column1">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section>
+    <p>space Between</p>
+    <section class="container space column1">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section>
+    <p>space Between</p>
+    <section class="container space column1">
+        <div class="item3">1</div>
+        <div class="item3">item 2</div>
+        <div class="item3">outro item</div>
+        <div class="item3">outro outro item</div>
+    </section>
+    <h1>Fundamentos - align itens</h1>
+    <style>
+        .container1{
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+        }
+        .item4{
+            background-color: purple;
+            margin: 5px;
+            color: wheat;
+            text-align: center;
+            flex: 1;
+        }
+        .center{
+            align-items: center;
+        }
+        .flex1{
+            flex: 1;
+        }
+        .strech{
+            align-items: stretch;
+        }
+        .start{
+            align-items: flex-start;
+        }
+        .end{
+            align-items: flex-end;
+        }
+        .baseline{
+            align-items: baseline;
+        }
+        .column2{
+            flex-direction: column;
+        }
+    </style>
+    <p>center</p>
+    <section class="container1 center">
+        <div class="item4">1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+    <p>strech</p>
+    <section class="container1 strech">
+        <div class="item4">1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+    <p>flex-start</p>
+    <section class="container1 start">
+        <div class="item4">1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+    <p>flex-end</p>
+    <section class="container1 end">
+        <div class="item4">1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+    <p>baseline</p>
+    <section class="container1 baseline">
+        <div class="item4"><br>1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+    
+    <h1>column</h1>
+    
+    <p>center</p>
+    <section class="container1 center column">
+        <div class="item4">1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+    
+    <p>strech</p>
+    <section class="container1 strech column">
+        <div class="item4">1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+    
+    <p>flex-start</p>
+    <section class="container1 start column">
+        <div class="item4">1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+
+    <p>flex-end</p>
+    <section class="container1 end column">
+        <div class="item4">1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+    
+    <p>baseline</p>
+    <section class="container1 baseline column">
+        <div class="item4">---------------1</div>
+        <div class="item4">item 2</div>
+        <div class="item4">outro item</div>
+        <div class="item4">outro outro item</div>
+    </section>
+</body>
+</html>

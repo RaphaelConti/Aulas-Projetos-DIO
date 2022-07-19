@@ -4,6 +4,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    
 }
 .box-image{
     display: flex;
@@ -38,6 +40,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 300px;
 }
 .cadastro .botão-login{
     text-decoration: none;
@@ -78,4 +81,17 @@
     text-decoration: none;
     color: #0095f6;
     font-weight: 650;
+}
+
+@media (max-width:1024px){
+    justify-content: center;
+    .box{
+        
+        width: 90%;
+    }
+    .box-image{
+        display: none;
+    }
+
+
 }
